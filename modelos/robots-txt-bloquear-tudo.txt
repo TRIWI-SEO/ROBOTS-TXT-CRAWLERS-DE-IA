@@ -1,0 +1,12 @@
+# robots.txt modelo: Bloquear tudo
+# Nenhum robô que siga o robots.txt pode rastrear o site.
+# Gerado a partir da base aberta de robôs de IA da TRIWI, verificada em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e acrescente as regras que o seu site já usa hoje.
+
+# Atenção: este modelo tira o site do Google, do Bing e das IAs.
+# Use só em homologação ou em site que não deve aparecer em busca nenhuma.
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml

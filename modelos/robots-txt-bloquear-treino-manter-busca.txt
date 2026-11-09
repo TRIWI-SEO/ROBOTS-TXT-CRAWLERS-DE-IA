@@ -1,0 +1,26 @@
+# robots.txt modelo: Bloquear o treino e manter a busca
+# Os robôs e tokens de treino ficam sem acesso; os robôs de busca e de visita a pedido do usuário continuam liberados.
+# Gerado a partir da base aberta de robôs de IA da TRIWI, verificada em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e acrescente as regras que o seu site já usa hoje.
+
+# Treino de modelos de IA: sem acesso
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: meta-externalagent
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: MistralAI-Training
+Disallow: /
+
+# Arquivo aberto da web: sem acesso
+User-agent: CCBot
+Disallow: /
+
+# Todos os outros robôs, inclusive os que não estão na base: liberados
+# (Googlebot, Google-Agent, Google-GeminiNotebook, OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, Bingbot, PerplexityBot, Perplexity-User, meta-webindexer, meta-externalfetcher, Applebot, Amzn-SearchBot, Amzn-User, MistralAI-Index, MistralAI-User, DuckDuckBot, DuckAssistBot)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml

@@ -1,0 +1,10 @@
+# robots.txt modelo: Liberar tudo
+# Todos os buscadores e IAs podem rastrear o site, para busca, para visitas a pedido do usuário e para treino.
+# Gerado a partir da base aberta de robôs de IA da TRIWI, verificada em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e acrescente as regras que o seu site já usa hoje.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml

@@ -1,0 +1,49 @@
+# robots.txt modelo: Bloquear as IAs e manter os buscadores
+# Só Googlebot, Bingbot, Applebot e DuckDuckBot continuam com acesso; todos os outros robôs da base ficam bloqueados.
+# Gerado a partir da base aberta de robôs de IA da TRIWI, verificada em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e acrescente as regras que o seu site já usa hoje.
+
+# Treino de modelos de IA: sem acesso
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: meta-externalagent
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: MistralAI-Training
+Disallow: /
+
+# Busca das IAs: sem acesso
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: meta-webindexer
+User-agent: Amzn-SearchBot
+User-agent: MistralAI-Index
+User-agent: DuckAssistBot
+Disallow: /
+
+# Visitas a pedido do usuário: sem acesso
+# Google-Agent, Google-GeminiNotebook, ChatGPT-User, Perplexity-User, meta-externalfetcher, Amzn-User podem não seguir o robots.txt, segundo as próprias empresas;
+# para barrar de fato, bloqueie também no servidor ou na CDN.
+User-agent: Google-Agent
+User-agent: Google-GeminiNotebook
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
+User-agent: meta-externalfetcher
+User-agent: Amzn-User
+User-agent: MistralAI-User
+Disallow: /
+
+# Arquivo aberto da web: sem acesso
+User-agent: CCBot
+Disallow: /
+
+# Todos os outros robôs, inclusive os que não estão na base: liberados
+# (Googlebot, Bingbot, Applebot, DuckDuckBot)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml
