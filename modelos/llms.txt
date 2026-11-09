@@ -1,0 +1,24 @@
+# Nome da Empresa
+
+> Uma ou duas frases dizendo o que a empresa faz, para quem e onde atua. Use as mesmas palavras do site e dos perfis oficiais da marca.
+
+Informações que ajudam a IA a descrever a empresa sem erro: segmento, região atendida, ano de fundação, o que a empresa não faz e como prefere ser chamada. Mantenha os mesmos fatos que estão no site.
+
+## Produtos e serviços
+
+- [Nome do serviço principal](https://www.seusite.com.br/servico/): o problema que ele resolve, em uma frase
+- [Nome do segundo serviço](https://www.seusite.com.br/outro-servico/): para quem ele é
+
+## Conteúdos de referência
+
+- [Guia ou página mais completa sobre o tema da empresa](https://www.seusite.com.br/guia/): o que a página explica
+- [Perguntas frequentes](https://www.seusite.com.br/perguntas-frequentes/): respostas diretas sobre serviços, atendimento e prazos
+
+## Institucional
+
+- [Sobre a empresa](https://www.seusite.com.br/sobre/): história, equipe e números públicos
+- [Contato](https://www.seusite.com.br/contato/): canais oficiais de atendimento
+
+## Optional
+
+- [Blog](https://www.seusite.com.br/blog/): artigos de apoio, que a IA pode pular quando precisar de um contexto mais curto
