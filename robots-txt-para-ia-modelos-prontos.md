@@ -2,7 +2,7 @@
 
 **Há quatro escolhas comuns de robots.txt para as IAs: liberar tudo, bloquear só o treino e manter a busca, bloquear as IAs e manter os buscadores, ou bloquear tudo. Para a empresa que quer ser citada pelo ChatGPT, pelo Claude, pelo Perplexity e pelos AI Overviews, o essencial é manter liberados os robôs de busca. Os quatro modelos abaixo são gerados a partir da base aberta de 27 robôs da TRIWI.**
 
-Cada modelo vem com o arquivo pronto e o que muda, empresa por empresa, na presença da marca. Para adaptar ao seu site e testar as regras antes de publicar, use o [Gerador de robots.txt da TRIWI](https://triwi.com.br/ferramentas/gerador-de-robots-txt/?utm_source=github&utm_medium=referral&utm_campaign=repo-robots-txt-ia&utm_content=modelos-robots-txt).
+Cada modelo vem com o arquivo pronto e o que muda, empresa por empresa, na presença da marca. Para a parte do arquivo que não tem a ver com IA, como a área administrativa do WordPress ou o carrinho da loja, veja [Robots.txt: o que é e exemplos para WordPress e e-commerce](robots-txt-o-que-e-exemplos-wordpress-e-ecommerce.md). Para adaptar ao seu site e testar as regras antes de publicar, use o [Gerador de robots.txt da TRIWI](https://triwi.com.br/ferramentas/gerador-de-robots-txt/?utm_source=github&utm_medium=referral&utm_campaign=repo-robots-txt-ia&utm_content=modelos-robots-txt).
 
 *Por equipe de SEO da TRIWI, com revisão de Ricardo Martins, fundador. Publicado em 09/11/2026. Atualizado em 09/11/2026.*
 
@@ -14,6 +14,7 @@ Cada modelo vem com o arquivo pronto e o que muda, empresa por empresa, na prese
   - [Bloquear o treino e manter a busca](#como-bloquear-o-treino-de-ia-e-manter-a-busca)
   - [Bloquear as IAs e manter os buscadores](#como-bloquear-as-ias-e-manter-o-google-e-o-bing)
   - [Bloquear tudo](#como-bloquear-todos-os-robôs-no-robotstxt)
+- [Qual robô bloquear para cada objetivo?](#qual-robô-bloquear-para-cada-objetivo)
 - [Qual modelo escolher?](#qual-modelo-escolher)
 - [Como testar antes de publicar?](#como-testar-antes-de-publicar)
 - [Perguntas frequentes](#perguntas-frequentes)
@@ -52,7 +53,7 @@ Allow: /
 Sitemap: https://www.seusite.com.br/sitemap.xml
 ```
 
-Arquivo para baixar: [modelos/robots-txt-liberar-tudo.txt](modelos/robots-txt-liberar-tudo.txt).
+Arquivo para baixar: [modelos/robots-txt-liberar-tudo.txt](modelos/robots-txt-liberar-tudo.txt). Renomeie para `robots.txt` e publique na raiz do domínio, no lugar do arquivo atual, juntando as regras que o seu site já usa.
 
 #### O que muda na presença da marca com o modelo liberar tudo?
 
@@ -106,7 +107,7 @@ Allow: /
 Sitemap: https://www.seusite.com.br/sitemap.xml
 ```
 
-Arquivo para baixar: [modelos/robots-txt-bloquear-treino-manter-busca.txt](modelos/robots-txt-bloquear-treino-manter-busca.txt).
+Arquivo para baixar: [modelos/robots-txt-bloquear-treino-manter-busca.txt](modelos/robots-txt-bloquear-treino-manter-busca.txt). Renomeie para `robots.txt` e publique na raiz do domínio, no lugar do arquivo atual, juntando as regras que o seu site já usa.
 
 #### O que muda na presença da marca com o modelo bloquear o treino e manter a busca?
 
@@ -185,7 +186,7 @@ Allow: /
 Sitemap: https://www.seusite.com.br/sitemap.xml
 ```
 
-Arquivo para baixar: [modelos/robots-txt-bloquear-ias-manter-buscadores.txt](modelos/robots-txt-bloquear-ias-manter-buscadores.txt).
+Arquivo para baixar: [modelos/robots-txt-bloquear-ias-manter-buscadores.txt](modelos/robots-txt-bloquear-ias-manter-buscadores.txt). Renomeie para `robots.txt` e publique na raiz do domínio, no lugar do arquivo atual, juntando as regras que o seu site já usa.
 
 #### O que muda na presença da marca com o modelo bloquear as IAs e manter os buscadores?
 
@@ -206,6 +207,7 @@ Arquivo para baixar: [modelos/robots-txt-bloquear-ias-manter-buscadores.txt](mod
 - Os AI Overviews e o Modo IA do Google continuam, porque usam as páginas que o `Googlebot` indexa. Para limitar o que aparece neles, o Google indica nosnippet, data-nosnippet, max-snippet e noindex.
 - Os robôs de visita a pedido do usuário (`Google-Agent`, `Google-GeminiNotebook`, `ChatGPT-User`, `Perplexity-User`, `meta-externalfetcher` e `Amzn-User`) podem não seguir o bloqueio; para barrá-los, bloqueie também no servidor ou na CDN.
 - A marca deixa de ser citada com link nas IAs que dependem dos próprios robôs de busca, e quem pergunta a essas IAs sobre o seu mercado passa a ver outras fontes.
+- O modelo bloqueia os robôs de IA documentados na base. Robôs sem documentação oficial, como o `Bytespider`, continuam liberados pelo grupo geral; para barrá-los, bloqueie no servidor ou na CDN, ou troque `Allow: /` por `Disallow: /` no grupo geral, sabendo que isso também bloqueia prévias de link e outros robôs úteis.
 
 ### Como bloquear todos os robôs no robots.txt?
 
@@ -226,7 +228,7 @@ Disallow: /
 Sitemap: https://www.seusite.com.br/sitemap.xml
 ```
 
-Arquivo para baixar: [modelos/robots-txt-bloquear-tudo.txt](modelos/robots-txt-bloquear-tudo.txt).
+Arquivo para baixar: [modelos/robots-txt-bloquear-tudo.txt](modelos/robots-txt-bloquear-tudo.txt). Renomeie para `robots.txt` e publique na raiz do domínio, no lugar do arquivo atual, juntando as regras que o seu site já usa.
 
 #### O que muda na presença da marca com o modelo bloquear tudo?
 
@@ -246,6 +248,26 @@ Arquivo para baixar: [modelos/robots-txt-bloquear-tudo.txt](modelos/robots-txt-b
 
 - O robots.txt impede o rastreamento, não remove páginas do índice: uma URL bloqueada pode continuar aparecendo, sem descrição, se tiver links apontando para ela. Para tirar uma página do Google, o caminho é o noindex.
 - Um erro comum e caro em migração de site é este arquivo, usado na homologação, ir junto para o site em produção. Confira o robots.txt no dia de cada publicação.
+
+## Qual robô bloquear para cada objetivo?
+
+Quando o objetivo é sair de uma IA específica, e não escolher um dos quatro modelos, a tabela abaixo diz quais nomes entram no grupo com `Disallow: /`, empresa por empresa.
+
+| Empresa | Para sair do treino e continuar na busca | Para sair também da busca e das respostas |
+|:---|:---|:---|
+| Google | Bloquear `Google-Extended`; manter `Googlebot` | Não há como sair só dos AI Overviews e do Modo IA pelo robots.txt: bloquear o `Googlebot` tira o site da Pesquisa Google inteira. Para limitar o que aparece neles, use nosnippet, data-nosnippet ou max-snippet |
+| OpenAI | Bloquear `GPTBot`; manter `OAI-SearchBot` | Bloquear também `OAI-SearchBot` e `ChatGPT-User`; `ChatGPT-User` pode não seguir, então bloqueie também no servidor ou na CDN |
+| Anthropic | Bloquear `ClaudeBot`; manter `Claude-SearchBot` | Bloquear também `Claude-SearchBot` e `Claude-User` |
+| Microsoft | Sem robô de treino na base | Bloquear `Bingbot` |
+| Perplexity | Sem robô de treino na base | Bloquear `PerplexityBot` e `Perplexity-User`; `Perplexity-User` pode não seguir, então bloqueie também no servidor ou na CDN |
+| Meta | Bloquear `meta-externalagent`; manter `meta-webindexer` | Bloquear também `meta-webindexer` e `meta-externalfetcher`; `meta-externalfetcher` pode não seguir, então bloqueie também no servidor ou na CDN |
+| Apple | Bloquear `Applebot-Extended`; manter `Applebot` | Bloquear também `Applebot` |
+| Amazon | Bloquear `Amazonbot`; manter `Amzn-SearchBot` | Bloquear também `Amzn-SearchBot` e `Amzn-User`; `Amzn-User` pode não seguir, então bloqueie também no servidor ou na CDN |
+| Mistral AI | Bloquear `MistralAI-Training`; manter `MistralAI-Index` | Bloquear também `MistralAI-Index` e `MistralAI-User` |
+| DuckDuckGo | Sem robô de treino na base | Bloquear `DuckDuckBot` e `DuckAssistBot` |
+| Common Crawl | Bloquear `CCBot` | Sem robô de busca na base |
+
+O bloqueio do treino do Google, pelo `Google-Extended`, também tira o conteúdo da base (grounding) das respostas dos apps Gemini e da Vertex AI. O da Meta, pelo `meta-externalagent`, também vale para a indexação direta em produtos da Meta.
 
 ## Qual modelo escolher?
 
@@ -288,7 +310,7 @@ Depende da empresa. A OpenAI fala em cerca de 24 horas para a busca, a Meta em a
 <details>
 <summary><strong>O que acontece se o robots.txt der erro ou sair do ar?</strong></summary>
 
-O comportamento varia por empresa. A Amazon, por exemplo, diz que, se não conseguir buscar o arquivo, age como se ele não existisse, o que libera tudo. Por isso o robots.txt merece monitoramento como qualquer outra página crítica do site.
+A [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) define dois casos. Se o endereço do arquivo responde com erro 4xx, como 404, o robô pode rastrear tudo, como se o arquivo não existisse. Se responde com erro 5xx, de servidor fora do ar, o robô deve tratar o site como totalmente bloqueado. Na prática há variação: a Amazon, por exemplo, diz que, se não conseguir buscar o arquivo, age como se ele não existisse. Por isso o robots.txt merece monitoramento como qualquer outra página crítica do site.
 </details>
 
 <details>
