@@ -1,0 +1,17 @@
+# robots.txt modelo: E-commerce
+# Carrinho, checkout, conta do cliente e busca interna fora do rastreamento; produtos e categorias liberados.
+# Modelo da TRIWI, publicado em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e confira os caminhos do seu site.
+
+User-agent: *
+# Troque os caminhos abaixo pelos da sua plataforma de loja.
+Disallow: /carrinho/
+Disallow: /checkout/
+Disallow: /minha-conta/
+# Busca interna: troque q pelo parâmetro que a sua loja usa.
+Disallow: /*?q=
+Disallow: /*&q=
+Allow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml

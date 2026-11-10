@@ -1,0 +1,11 @@
+# robots.txt modelo: WordPress
+# As mesmas regras que o WordPress gera sozinho quando o site não tem arquivo próprio, mais o sitemap.
+# Modelo da TRIWI, publicado em 09/11/2026:
+# https://github.com/TRIWI-SEO/ROBOTS-TXT-CRAWLERS-DE-IA
+# Antes de publicar: troque o endereço do sitemap e confira os caminhos do seu site.
+
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://www.seusite.com.br/sitemap.xml
