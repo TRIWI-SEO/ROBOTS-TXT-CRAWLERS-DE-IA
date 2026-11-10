@@ -27,6 +27,8 @@
   &nbsp;|&nbsp;
   <a href="robots-txt-para-ia-modelos-prontos.md">Modelos de robots.txt</a>
   &nbsp;|&nbsp;
+  <a href="robots-txt-o-que-e-exemplos-wordpress-e-ecommerce.md">Exemplos de robots.txt</a>
+  &nbsp;|&nbsp;
   <a href="llms-txt-modelo-e-como-usar.md">Modelo de llms.txt</a>
   &nbsp;|&nbsp;
   <a href="dados/robos-de-ia.csv">Base em CSV</a>
@@ -76,6 +78,7 @@ Esta base resolve isso num lugar só, em português, com o link da documentaçã
 |:---|:---|
 | [Lista de robôs de IA: GPTBot, ClaudeBot, PerplexityBot e os demais](lista-de-robos-de-ia-gptbot-claudebot-perplexitybot.md) | Os 27 robôs, empresa por empresa, com o que acontece se cada um for bloqueado |
 | [Robots.txt para IA: modelos prontos](robots-txt-para-ia-modelos-prontos.md) | Quatro modelos de robots.txt, como o arquivo funciona com as IAs e qual escolher |
+| [Robots.txt: o que é e exemplos para WordPress e e-commerce](robots-txt-o-que-e-exemplos-wordpress-e-ecommerce.md) | A sintaxe, as regras da norma, modelos para WordPress e loja virtual e como juntar com as regras para IAs |
 | [llms.txt: modelo e como usar](llms-txt-modelo-e-como-usar.md) | O modelo de llms.txt em português, o formato e o que o arquivo faz e não faz |
 | [Dicionário de dados](dados/dicionario-de-dados.md) | O significado de cada coluna da base e como ela é mantida |
 
@@ -83,35 +86,35 @@ Esta base resolve isso num lugar só, em português, com o link da documentaçã
 
 | Empresa | Robô (user-agent) | Função | Segue o robots.txt? | Documentação oficial |
 |:---|:---|:---|:---|:---|
-| Google | `Googlebot` | Busca | Sim | [Abrir](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) |
+| Google | `Googlebot` | Busca | Sim, declarado | [Abrir](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) |
 | Google | `Google-Extended` | Treino | Não se aplica | [Abrir](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) |
 | Google | `Google-Agent` | Visita a pedido do usuário | Em geral não segue | [Abrir](https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers) |
 | Google | `Google-GeminiNotebook` | Visita a pedido do usuário | Em geral não segue | [Abrir](https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers) |
-| OpenAI | `GPTBot` | Treino | Sim | [Abrir](https://developers.openai.com/api/docs/bots) |
-| OpenAI | `OAI-SearchBot` | Busca | Sim | [Abrir](https://developers.openai.com/api/docs/bots) |
+| OpenAI | `GPTBot` | Treino | Bloqueio documentado | [Abrir](https://developers.openai.com/api/docs/bots) |
+| OpenAI | `OAI-SearchBot` | Busca | Bloqueio documentado | [Abrir](https://developers.openai.com/api/docs/bots) |
 | OpenAI | `ChatGPT-User` | Visita a pedido do usuário | Pode não seguir | [Abrir](https://developers.openai.com/api/docs/bots) |
-| Anthropic | `ClaudeBot` | Treino | Sim | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
-| Anthropic | `Claude-SearchBot` | Busca | Sim | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
-| Anthropic | `Claude-User` | Visita a pedido do usuário | Sim | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
-| Microsoft | `Bingbot` | Busca | Sim | [Abrir](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0) |
-| Perplexity | `PerplexityBot` | Busca | Sim | [Abrir](https://docs.perplexity.ai/guides/bots) |
+| Anthropic | `ClaudeBot` | Treino | Sim, declarado | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
+| Anthropic | `Claude-SearchBot` | Busca | Sim, declarado | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
+| Anthropic | `Claude-User` | Visita a pedido do usuário | Sim, declarado | [Abrir](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler) |
+| Microsoft | `Bingbot` | Busca | Bloqueio documentado | [Abrir](https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0) |
+| Perplexity | `PerplexityBot` | Busca | Bloqueio documentado | [Abrir](https://docs.perplexity.ai/guides/bots) |
 | Perplexity | `Perplexity-User` | Visita a pedido do usuário | Em geral não segue | [Abrir](https://docs.perplexity.ai/guides/bots) |
-| Meta | `meta-externalagent` | Treino | Sim | [Abrir](https://developers.facebook.com/docs/sharing/webmasters/web-crawlers) |
-| Meta | `meta-webindexer` | Busca | Sim | [Abrir](https://developers.facebook.com/docs/sharing/webmasters/web-crawlers) |
+| Meta | `meta-externalagent` | Treino | Bloqueio documentado | [Abrir](https://developers.facebook.com/docs/sharing/webmasters/web-crawlers) |
+| Meta | `meta-webindexer` | Busca | Bloqueio documentado | [Abrir](https://developers.facebook.com/docs/sharing/webmasters/web-crawlers) |
 | Meta | `meta-externalfetcher` | Visita a pedido do usuário | Pode não seguir | [Abrir](https://developers.facebook.com/docs/sharing/webmasters/web-crawlers) |
-| Apple | `Applebot` | Busca | Sim | [Abrir](https://support.apple.com/en-us/119829) |
+| Apple | `Applebot` | Busca | Sim, declarado | [Abrir](https://support.apple.com/en-us/119829) |
 | Apple | `Applebot-Extended` | Treino | Não se aplica | [Abrir](https://support.apple.com/en-us/119829) |
-| Amazon | `Amazonbot` | Treino | Sim | [Abrir](https://developer.amazon.com/amazonbot) |
-| Amazon | `Amzn-SearchBot` | Busca | Sim | [Abrir](https://developer.amazon.com/amazonbot) |
+| Amazon | `Amazonbot` | Treino | Sim, declarado | [Abrir](https://developer.amazon.com/amazonbot) |
+| Amazon | `Amzn-SearchBot` | Busca | Sim, declarado | [Abrir](https://developer.amazon.com/amazonbot) |
 | Amazon | `Amzn-User` | Visita a pedido do usuário | Pode não seguir | [Abrir](https://developer.amazon.com/amazonbot) |
-| Mistral AI | `MistralAI-Training` | Treino | Sim | [Abrir](https://docs.mistral.ai/robots) |
-| Mistral AI | `MistralAI-Index` | Busca | Sim | [Abrir](https://docs.mistral.ai/robots) |
-| Mistral AI | `MistralAI-User` | Visita a pedido do usuário | Sim | [Abrir](https://docs.mistral.ai/robots) |
-| DuckDuckGo | `DuckDuckBot` | Busca | Sim | [Abrir](https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot) |
-| DuckDuckGo | `DuckAssistBot` | Busca | Sim | [Abrir](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot) |
-| Common Crawl | `CCBot` | Arquivo aberto da web | Sim | [Abrir](https://commoncrawl.org/ccbot) |
+| Mistral AI | `MistralAI-Training` | Treino | Bloqueio documentado | [Abrir](https://docs.mistral.ai/robots) |
+| Mistral AI | `MistralAI-Index` | Busca | Bloqueio documentado | [Abrir](https://docs.mistral.ai/robots) |
+| Mistral AI | `MistralAI-User` | Visita a pedido do usuário | Sim, declarado | [Abrir](https://docs.mistral.ai/robots) |
+| DuckDuckGo | `DuckDuckBot` | Busca | Sim, declarado | [Abrir](https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot) |
+| DuckDuckGo | `DuckAssistBot` | Busca | Bloqueio documentado | [Abrir](https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot) |
+| Common Crawl | `CCBot` | Arquivo aberto da web | Bloqueio documentado | [Abrir](https://commoncrawl.org/ccbot) |
 
-O que acontece quando cada robô é bloqueado, e as observações de cada empresa, estão na [Lista de robôs de IA](lista-de-robos-de-ia-gptbot-claudebot-perplexitybot.md). Os robôs e as regras mudam: em caso de divergência, vale a página oficial da empresa.
+O que acontece quando cada robô é bloqueado, o trecho da documentação que sustenta a classificação, a frase que aparece no log e como confirmar a origem de cada robô estão na [Lista de robôs de IA](lista-de-robos-de-ia-gptbot-claudebot-perplexitybot.md). Os robôs e as regras mudam: em caso de divergência, vale a página oficial da empresa.
 
 ## Qual modelo de robots.txt usar?
 
@@ -124,21 +127,15 @@ O que acontece quando cada robô é bloqueado, e as observações de cada empres
 
 Para a maioria das empresas que querem ser encontradas e citadas, os robôs de busca das IAs devem ficar liberados. Como resume o [Guia de GEO da TRIWI](https://triwi.com.br/guias/geo/?utm_source=github&utm_medium=referral&utm_campaign=repo-robots-txt-ia&utm_content=readme), bloquear o treino é decisão de negócio, tomada com o jurídico, porque envolve o uso do conteúdo; bloquear a busca é decisão de visibilidade. O efeito de cada modelo, IA por IA, está em [Robots.txt para IA: modelos prontos](robots-txt-para-ia-modelos-prontos.md), e o [Gerador de robots.txt da TRIWI](https://triwi.com.br/ferramentas/gerador-de-robots-txt/?utm_source=github&utm_medium=referral&utm_campaign=repo-robots-txt-ia&utm_content=readme) monta a versão do seu site com essas escolhas.
 
+O modelo Bloquear as IAs vale para os robôs documentados na base. Robôs sem documentação oficial, como o `Bytespider`, continuam liberados pelo grupo geral `User-agent: *`; para barrá-los, bloqueie no servidor ou na CDN. Para a parte do robots.txt que não tem a ver com IA, como a área administrativa do WordPress ou o carrinho da loja, veja os [exemplos para WordPress e e-commerce](robots-txt-o-que-e-exemplos-wordpress-e-ecommerce.md).
+
 ## Dados abertos
 
 | Arquivo | O que traz | Linhas |
 |:---|:---|:---|
-| [dados/robos-de-ia.csv](dados/robos-de-ia.csv) | Cada robô com empresa, produto, user-agent, função, se segue o robots.txt, o efeito do bloqueio, observação, link da documentação oficial e data da verificação | 27 |
+| [dados/robos-de-ia.csv](dados/robos-de-ia.csv) | Cada robô com empresa, produto, user-agent, função, se segue o robots.txt e o trecho da documentação que sustenta isso, o efeito do bloqueio, a frase que aparece no log, como confirmar a origem, o link da documentação oficial e a data da verificação | 27 |
 
-| Modelo | Arquivo | Para que serve |
-|:---|:---|:---|
-| Liberar tudo | [modelos/robots-txt-liberar-tudo.txt](modelos/robots-txt-liberar-tudo.txt) | Todos os buscadores e IAs podem rastrear o site, para busca, para visitas a pedido do usuário e para treino. |
-| Bloquear o treino e manter a busca | [modelos/robots-txt-bloquear-treino-manter-busca.txt](modelos/robots-txt-bloquear-treino-manter-busca.txt) | Os robôs e tokens de treino ficam sem acesso; os robôs de busca e de visita a pedido do usuário continuam liberados. |
-| Bloquear as IAs e manter os buscadores | [modelos/robots-txt-bloquear-ias-manter-buscadores.txt](modelos/robots-txt-bloquear-ias-manter-buscadores.txt) | Só `Googlebot`, `Bingbot`, `Applebot` e `DuckDuckBot` continuam com acesso; todos os outros robôs da base ficam bloqueados. |
-| Bloquear tudo | [modelos/robots-txt-bloquear-tudo.txt](modelos/robots-txt-bloquear-tudo.txt) | Nenhum robô que siga o robots.txt pode rastrear o site. |
-| llms.txt | [modelos/llms.txt](modelos/llms.txt) | Mapa curto do site para as IAs, no formato da proposta llms.txt |
-
-O significado de cada coluna está no [dicionário de dados](dados/dicionario-de-dados.md). Os modelos são gerados a partir da base, então nunca divergem dela: quando um robô entra ou muda, os modelos mudam junto. Outras bases abertas da TRIWI, como o [glossário de SEO, marketing e IA](https://github.com/TRIWI-SEO/SEO-IA/blob/main/dados/glossario-triwi.csv) e as [atualizações do Google e das IAs](https://github.com/TRIWI-SEO/SEO-IA/blob/main/dados/atualizacoes-google-e-ias.csv), estão na Base de Conhecimento.
+O significado de cada coluna está no [dicionário de dados](dados/dicionario-de-dados.md). Os arquivos de modelo estão na tabela [Qual modelo de robots.txt usar](#qual-modelo-de-robotstxt-usar), nos [exemplos para WordPress e e-commerce](robots-txt-o-que-e-exemplos-wordpress-e-ecommerce.md) e no [modelo de llms.txt](llms-txt-modelo-e-como-usar.md). Os modelos para IAs são gerados a partir da base, então nunca divergem dela: quando um robô entra ou muda, os modelos mudam junto. Outras bases abertas da TRIWI, como o [glossário de SEO, marketing e IA](https://github.com/TRIWI-SEO/SEO-IA/blob/main/dados/glossario-triwi.csv) e as [atualizações do Google e das IAs](https://github.com/TRIWI-SEO/SEO-IA/blob/main/dados/atualizacoes-google-e-ias.csv), estão na Base de Conhecimento.
 
 ## Como a base é verificada?
 
@@ -147,7 +144,8 @@ O significado de cada coluna está no [dicionário de dados](dados/dicionario-de
 | Fonte | Só a documentação oficial da empresa dona do robô, com o link em cada linha |
 | O que entra | Robôs e tokens de controle que decidem treino, busca ou visita a pedido do usuário |
 | O que fica fora | Robôs sem documentação oficial, robôs de anúncio, de prévia de link e de verificação |
-| Segue o robots.txt | O que a empresa declara; quando ela avisa que o robô pode ignorar o arquivo, a base registra |
+| Segue o robots.txt | Duas classificações separadas: declaração explícita da empresa ou bloqueio documentado sem declaração; quando a empresa avisa que o robô pode ignorar o arquivo, a base registra. Cada linha traz o trecho da documentação, no original |
+| Log e origem | A frase do user-agent como aparece no log e o link da lista de IPs ou do método de verificação, quando a empresa publica |
 | Data | Cada linha tem a data em que a documentação foi conferida |
 | Divergência | Quando um artigo de terceiro diverge da documentação oficial, vale a documentação oficial |
 
@@ -176,7 +174,7 @@ Não. O Google diz que o `Google-Extended` não afeta a inclusão na Pesquisa Go
 <details>
 <summary><strong>Os robôs de IA respeitam o robots.txt?</strong></summary>
 
-Os robôs que rastreiam a web por conta própria seguem o robots.txt, segundo a documentação de cada empresa. Os que visitam páginas a pedido do usuário são outra história: OpenAI, Meta e Amazon avisam que eles podem não seguir, e Google e Perplexity dizem que em geral não seguem. Na base, são 6 robôs nessa situação; para barrá-los de fato, o bloqueio tem que ser feito no servidor ou na CDN.
+Depende do robô. Na base, 9 robôs têm declaração explícita da empresa de que seguem o arquivo, e 10 têm o bloqueio pelo robots.txt documentado, sem essa declaração. Os que visitam páginas a pedido do usuário são outra história: OpenAI, Meta e Amazon avisam que eles podem não seguir, e Google e Perplexity dizem que em geral não seguem. São 6 robôs nessa situação; para barrá-los de fato, o bloqueio tem que ser feito no servidor ou na CDN. Cada linha da base traz o trecho da documentação que sustenta a classificação.
 </details>
 
 <details>
@@ -219,6 +217,7 @@ Sim. A base, os modelos e os textos estão sob licença [CC BY 4.0](LICENSE): vo
 
 | Data | O que mudou |
 |:---|:---|
+| 09/11/2026 | Revisão no dia do lançamento: trecho da documentação, frase do user-agent e verificação de origem em cada robô; classificação separada entre declaração e bloqueio documentado; página de exemplos para WordPress e e-commerce; tabela de qual robô bloquear para cada objetivo |
 | 09/11/2026 | Publicação da base com 27 robôs de 11 empresas, quatro modelos de robots.txt, modelo de llms.txt e três páginas de apoio |
 
 ## Como citar
